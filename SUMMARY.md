@@ -10,7 +10,7 @@
    * Batch
    * OriginStrategy
    * More on image registration
-   * Querying for images
+   * [Querying for images](API_Reference/querying_for_images.md)
    * Role
    * AuthService
    * RoleProvider
