@@ -1,4 +1,4 @@
-# DLCS Command Line utiltiy
+# DLCS Command Line Utility
 
 A command line utility for interacting with the DLCS, rather than issuing HTTP API requests directly. It can register single images from a local file system or from remote origin endpoints. Customers can use the utility to help build systems integration solutions quickly (it's just another command to pipe things to).
 
