@@ -44,9 +44,13 @@ If the user uploaded multiple images at once, they will are queued as in the Lib
 
 ## IIIF resources and the Linked Data Platform
 
-It's important to understand that the DLCS does not at present offer a CRUD API to IIIF resources directly. For example, adding a new canvas to a manifest
+The DLCS does not at present offer a CRUD API to IIIF resources directly. For example, adding a new IIIF Presentation API Canvas to a manifest by POSTing a new Canvas resource to a Sequence. Instead, the DLCS offers an API to manage image resources, and these DLCS resources result in IIIF resources on dlcs.io. No IIIF resources are served from api.dlcs.io, and no DLCS resources are served from dlcs.io. Your interaction with the API at api.dlcs.io adds image resources to the platform, which results in Image API endpoints on dlcs.io. If you define named queries via the API, you will also get Presentation API resources from dlcs.io.
+
+As a formal specification becomes available for IIIF CRUD, the DLCS will support it.
 
 ## The DLCS API
+
+The 
 
 Hydra
 Ease of use via HTTP
