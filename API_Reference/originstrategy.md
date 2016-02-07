@@ -1,4 +1,4 @@
-# OriginStrategy
+# Origin Strategy
 
 As a customer you can provide information to the DLCS to allow it to fetch your images from their origin endpoints.
 
