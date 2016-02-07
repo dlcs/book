@@ -1,0 +1,2 @@
+# More on image registration
+
