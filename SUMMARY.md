@@ -9,12 +9,12 @@
    * Queue
    * Batch
    * OriginStrategy
+   * More on image registration
    * Role
    * AuthService
    * RoleProvider
    * NamedQuery
    * PortalUser
-   * More on image registration
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
 * Other ways to register images
 * Using the portal
