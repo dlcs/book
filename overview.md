@@ -44,6 +44,11 @@ If the user uploaded multiple images at once, they will are queued as in the Lib
 
 ## IIIF resources and the Linked Data Platform
 
-Use the DLCS in two ways
+It's important to understand that the DLCS does not at present offer a CRUD API to IIIF resources directly. For example, adding a new canvas to a manifest
 
-As a development platform
+## The DLCS API
+
+Hydra
+Ease of use via HTTP
+Will provide lots of examples of use in differnet languages.
+detailed stuff follows
