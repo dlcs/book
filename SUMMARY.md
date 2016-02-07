@@ -8,7 +8,7 @@
    * [Image](API_Reference/image.md)
    * Queue
    * Batch
-   * OriginStrategy
+   * [OriginStrategy](API_Reference/originstrategy.md)
    * [More on image registration](API_Reference/more_on_image_registration.md)
    * [Querying for images](API_Reference/querying_for_images.md)
    * Role
