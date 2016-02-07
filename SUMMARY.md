@@ -7,6 +7,7 @@
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
    * Queue
+   * Batch
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
 * Other ways to register images
 
