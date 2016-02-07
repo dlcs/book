@@ -13,6 +13,7 @@
    * AuthService
    * RoleProvider
    * NamedQuery
+   * PortalUser
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
 * Other ways to register images
 
