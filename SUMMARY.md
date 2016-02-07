@@ -1,5 +1,5 @@
 # Summary
 
 * [Overview](overview.md)
-* Resource types
+* [Resource types](resource_types.md)
 
