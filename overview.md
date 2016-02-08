@@ -36,9 +36,9 @@ The API allows the digitisation workflow to monitor the progress of the images i
 
 #### iiif.ly
 
-This is a demonstration web application that interacts with the DLCS API in real time to create IIIF resources from user input. It stores a small amount of information about its users in a local database, but uses the DLCS API to store the information about the user's images. It uses a feature of the DLCS API called ***spaces*** to partition the images by user. The iiif.ly app is a customer of the DLCS and interacts using a single API key, but within its customer storage it can create unlimited numbers of spaces to organise the images it registers.
+This is a demonstration web application that interacts with the DLCS API in real time to create IIIF resources from user input. It demonstrates two modes of registering images - *queued* and *immediate*. It stores a small amount of information about its users in a local database, but uses the DLCS API for everything else. It uses a feature of the DLCS API called ***spaces*** to partition the images by user. The iiif.ly application uses an API key to talk to the DLCS. This key corresponds to a single customer. Within its customer storage it can create unlimited numbers of spaces to organise the images it registers.
 
-A user can drag an image from the web or from the local machine into the iiif.ly upload user interface. When the user submits the form, the iiif.ly code will check to see if the current user already has a space in the DLCS and if not will create one. The iiif.ly application then registers the image with the DLCS in "immediate" mode. This is only permitted for API operations that register one image at a time. It is a synchronous image registration operation suitable for driving a user interface.
+A user can drag an image from the web or from the local machine into the iiif.ly upload user interface. When the user submits the form, the iiif.ly code will check to see if the current user already has a space in the DLCS and if not will create one. The iiif.ly application then registers the image with the DLCS in "immediate" mode. This is only permitted for API operations that register one image at a time. It is a synchronous image registration operation suitable for driving a user interface. 
 
 If the user uploaded multiple images at once, they are queued as in the Library example. Once they have all finished processing the iiif.ly application will display the set of images as a single IIIF resource - a manifest. It does this by making use of a DLCS API feature called "named queries". A named query is like a stored procedure in a relational database. As well as encoding the information required to retrieve the images stored in the DLCS, the named query also encodes the information required to *project* the results of a DLCS query into a IIIF resource. 
 
@@ -50,14 +50,15 @@ As a formal specification becomes available for IIIF CRUD, the DLCS will support
 
 ## The DLCS API
 
-The DLCS provides a Hypermedia API for managing its resources. This API is built using the [Hydra vocabulary](http://www.hydra-cg.com/spec/latest/core/). While the Hydra specification is a work in progress, we have chosen to adopt it in preference to other Hypermedia vocabularies such as HAL or SIREN. We feel that having the DLCS API use the same JSON-LD standard as the IIIF resources will help developers build applications on top of it.
+The DLCS provides a Hypermedia API for managing its resources. This API is built using the [Hydra vocabulary](http://www.hydra-cg.com/spec/latest/core/). While the Hydra specification is a work in progress, we have chosen to adopt it in preference to other Hypermedia vocabularies such as HAL or SIREN. We feel that having the DLCS API use the same JSON-LD standard as the IIIF resources it provides will help developers build applications on top of it.
 
-The API *entry point* is at https://api.dlcs.io. Credentials must be presented using Basic authentication over https.
+The API *entry point* is at https://api.dlcs.io. Clients of the API must present credentials using Basic authentication over https.
 
 A test version of the API is also available at http://dlcs.azurewebsites.net. This can be explored without credentials. 
 
 
 ## The DLCS command line utility
 
-(to follow)
+As well as the API, we will provide a command line utility which can be integrated into batch scripts or used directly to interact with the DLCS.
+
 
