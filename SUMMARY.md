@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Overview](overview.md)
 * [API Reference](API_Reference/README.md)
+   * Resource model
    * [Customer](API_Reference/customer.md)
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
@@ -16,7 +17,6 @@
    * RoleProvider
    * NamedQuery
    * PortalUser
-   * Resource model
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
 * Other ways to register images
 * Using the portal
