@@ -4,7 +4,7 @@
 
 ## Why does it exist?
 
-In the past, digitisation efforts were hampered by lack of standards. Content digitised at great expense stagnated in non interoperable silos behind ageing user interfaces. The [International Image Interoperability Framework](http://iiif.io) and the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) are emerging open standards. This means that the DLCS can offer commodity interoperable services that conform to these standards. 
+In the past, digitisation efforts were hampered by lack of standards. Content digitised at great expense stagnated in non interoperable silos behind ageing user interfaces. The [International Image Interoperability Framework](http://iiif.io) and the [W3C Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) are emerging open standards that address this problem. This means that the DLCS can offer commodity interoperable services that conform to these standards. 
 
 ## Who can use it?
 
@@ -16,15 +16,15 @@ DLCS provides tools, hosted services and application programming interfaces (API
 
 If you have access control requirements the DLCS can enforce your policies to protect your images.
 
-The DLCS offers read and write services for annotations on your images and other IIIF resources, using Open Annotation / W3C Annotation Data Model. You can integrate with existing annotation tools and services or use the DLCS to build interesting new applications for discovery, crowdsourcing, curation and other purposes.
+The DLCS will offer read and write services for annotations on your images and other IIIF resources, using Open Annotation / W3C Annotation Data Model. You can integrate with existing annotation tools and services, or use the DLCS to build interesting new applications for discovery, crowdsourcing, curation and other purposes.
 
-The DLCS can perform optical character recognition (OCR) on your images. The OCR results are available in a variety of standard formats including METS-ALTO and transcription annotations.
+The DLCS will be able to perform optical character recognition (OCR) on your images. The OCR results are available in a variety of standard formats including METS-ALTO and transcription annotations.
 
 The DLCS provides high performance search within your IIIF resources and across your entire collection.
 
 ## What doesn't it do?
 
-The DLCS is not intended to be a preservation system, digital asset management system, collection management or cataloguing system. It does not provide any user interface for public discovery of your resources. It is however designed for integration with all these types of system and more, through its APIs and services.
+The DLCS is not intended to be a preservation system, digital asset management system, collection management or cataloguing system. It does not provide any user interface for public discovery of your resources. It is designed for integration with all these types of system and more, through its APIs and services.
 
 
 
