@@ -16,6 +16,7 @@
    * RoleProvider
    * NamedQuery
    * PortalUser
+   * Resource model
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
 * Other ways to register images
 * Using the portal
