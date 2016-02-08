@@ -39,7 +39,7 @@ The full description of the types and their supported properties and operations 
 http://dlcs.azurewebsites.net/vocab
 ```
 
-A diagram showing the full model is [available here](API_Reference/resource_model.md); the rest of this section looks at each resource type in detail.
+A diagram showing the full model is [available here](resource_model.md); the rest of this section looks at each resource type in detail.
 
 
 
