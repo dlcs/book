@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Overview](overview.md)
 * [API Reference](API_Reference/README.md)
-   * Resource model
+   * [Resource model](API_Reference/resource_model.md)
    * [Customer](API_Reference/customer.md)
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
