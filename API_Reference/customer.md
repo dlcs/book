@@ -23,6 +23,7 @@ A customer represents you, the API user. You only have access to one customer, s
 }
 ```
 
+A customer resource has links to 
 ## Links
 
 |URI	|Method	|Accepts	|Returns	|Statuses|	
