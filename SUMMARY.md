@@ -8,7 +8,7 @@
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
    * [Queue](API_Reference/queue.md)
-   * Batch
+   * [Batch](API_Reference/batch.md)
    * [OriginStrategy](API_Reference/originstrategy.md)
    * [More on image registration](API_Reference/more_on_image_registration.md)
    * [Querying for images](API_Reference/querying_for_images.md)
