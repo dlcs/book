@@ -14,7 +14,7 @@
    * [Querying for images](API_Reference/querying_for_images.md)
    * [Role](API_Reference/role.md)
    * [AuthService](API_Reference/authservice.md)
-   * RoleProvider
+   * [RoleProvider](API_Reference/roleprovider.md)
    * NamedQuery
    * PortalUser
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
