@@ -17,6 +17,7 @@
    * [RoleProvider](API_Reference/roleprovider.md)
    * [NamedQuery](API_Reference/namedquery.md)
    * [PortalUser](API_Reference/portaluser.md)
+   * Handling Collections
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
 * [Other ways to register images](other_ways_to_register_images.md)
 * Using the portal
