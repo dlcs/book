@@ -7,7 +7,7 @@
    * [Customer](API_Reference/customer.md)
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
-   * Queue
+   * [Queue](API_Reference/queue.md)
    * Batch
    * [OriginStrategy](API_Reference/originstrategy.md)
    * [More on image registration](API_Reference/more_on_image_registration.md)
