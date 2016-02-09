@@ -18,7 +18,7 @@
    * NamedQuery
    * PortalUser
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
-* Other ways to register images
+* [Other ways to register images](other_ways_to_register_images.md)
 * Using the portal
 * [Questions](questions.md)
 
