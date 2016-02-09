@@ -12,7 +12,7 @@
    * [OriginStrategy](API_Reference/originstrategy.md)
    * [More on image registration](API_Reference/more_on_image_registration.md)
    * [Querying for images](API_Reference/querying_for_images.md)
-   * Role
+   * [Role](API_Reference/role.md)
    * AuthService
    * RoleProvider
    * NamedQuery
