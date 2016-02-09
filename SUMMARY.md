@@ -4,6 +4,7 @@
 * [Overview](overview.md)
 * [API Reference](API_Reference/README.md)
    * [Resource model](API_Reference/resource_model.md)
+   * Handling Collections
    * [Customer](API_Reference/customer.md)
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
@@ -17,7 +18,6 @@
    * [RoleProvider](API_Reference/roleprovider.md)
    * [NamedQuery](API_Reference/namedquery.md)
    * [PortalUser](API_Reference/portaluser.md)
-   * Handling Collections
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
 * [Other ways to register images](other_ways_to_register_images.md)
 * Using the portal
