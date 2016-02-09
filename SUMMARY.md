@@ -21,4 +21,5 @@
 * [Other ways to register images](other_ways_to_register_images.md)
 * Using the portal
 * [Questions](questions.md)
+* Include test
 
