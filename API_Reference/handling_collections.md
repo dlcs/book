@@ -63,6 +63,7 @@ Here you are provided with just the link and the fact that the resource at the o
 
 ### RDF note
 
-> Although in the JSON-LD serialisation, the Hydra Collection's "member" property has an inherent ordering, in the underlying RDF model there is no such ordering. This is because "member" is not defined as a @list in JSON-LD terms. This is an open issue with our use of the Hydra model.
+> Although in the JSON-LD serialisation, the Hydra Collection's "member" property has an inherent ordering, in the underlying RDF model there is no such ordering. This is because "member" is not defined as a @list in JSON-LD terms [1]. This is an open issue with our use of the Hydra model.
 
 
+[1] https://www.w3.org/TR/json-ld/#sets-and-lists
