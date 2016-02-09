@@ -1,6 +1,6 @@
-# Customer
-
 ![](customer.png)
+
+{% include "git+https://github.com/dlcs/dlcs-net.git/DLCS.Mock/Generated-Docs/Customer.md" %}
 
 ## Example
 
@@ -20,5 +20,3 @@
   "spaces": "http://dlcs.azurewebsites.net/customers/4/spaces"
 }
 ```
-
-{% include "git+https://github.com/dlcs/dlcs-net.git/DLCS.Mock/Generated-Docs/Customer.md" %}
