@@ -1,7 +1,5 @@
 # Customer
 
-A customer represents you, the API user. You only have access to one customer, so it is your effective entry point for the API. 
-
 ![](customer.png)
 
 ## Example
