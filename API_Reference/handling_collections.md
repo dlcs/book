@@ -40,19 +40,19 @@ It depends. We hope the answer to this is "they are when you need them to be" - 
 
    "member":[
       {
-         "@id":"http://dlcs.azurewebsites.net/customers/1",
+         "@id":"https://api.dlcs.io/customers/1",
          "@type":"Customer"
       },
       {
-         "@id":"http://dlcs.azurewebsites.net/customers/2",
+         "@id":"https://api.dlcs.io/customers/2",
          "@type":"Customer"
       },
       {
-         "@id":"http://dlcs.azurewebsites.net/customers/3",
+         "@id":"https://api.dlcs.io/customers/3",
          "@type":"Customer"
       },
       {
-         "@id":"http://dlcs.azurewebsites.net/customers/4",
+         "@id":"https://api.dlcs.io/customers/4",
          "@type":"Customer"
       }
    ]
