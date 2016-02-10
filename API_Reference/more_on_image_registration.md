@@ -15,8 +15,24 @@ When registering each image, you send the DLCS one or more Image resources, as d
 You can PUT a single Image resource to a URL that maps to a space you have already configured:
 
 ```
-curl --user name:password -X POST -d '{"space":"1", "id":"my-image", "origin":"http://flickr.com/xxx/yyy.jpg"}' http://api.dlcs.io/3 
+curl --user name:password -X PUT -d '{"origin":"http://flickr.com/xxx/yyy.jpg"}' https://api.dlcs.io/customers/3/spaces/4/images/my-new-image-id
 ```
+
+or your can POST the new image to the space:
+
+```
+curl --user name:password -X POST -d '{"origin":"http://flickr.com/xxx/yyy.jpg", "id":"my-new-image-id"}' https://api.dlcs.io/customers/3/spaces/4/images
+```
+
+Once registered, the image information is available at
+
+```
+https://dlcs.io/iiif-img/3/4/my-new-image-id/info.json
+```
+
+If you don't supply an identifier the image, the DLCS will assign one.
+
+Both of these are processed immediately, synchronously, and the HTTP response will not come back until the DLCS has finished with them. They 
 
 [1] Not currently supported
 
