@@ -18,24 +18,32 @@ curl --user name:password -X GET -d https://api.dlcs.io/customers/3/spaces/4/ima
 
 This returns a Hydra collection.
 
-[
-    {
-        "url":"http://dlcs.io/2/3/76677bd1-705e-4599",
-        "space": 3,
-        "id": "76677bd1-705e-4599",
-        "origin": "https://example.org/dam/images/76677bd1-705e-4599.tiff",
-        "string1": "bib343434",
-        "number1": 0,
-        "tags" : ["cover", "interesting"]        
-    },
-    {
-        "url":"http://dlcs.io/2/3/0bf94941-2c0f-49fd",
-        "space": 3,
-        "id": "0bf94941-2c0f-49fd",
-        "origin": "https://example.org/dam/images/0bf94941-2c0f-49fd.tiff",
-        "string1": "bib343434",
-        "nu,mber": 1     
-    }
-]
-
+```
+{
+  "@context": "http://www.w3.org/ns/hydra/context.jsonld",
+  "@id": "https://api.dlcs.io/customers/3/spaces/4/images?string1=bib343434",
+  "@type": "Collection",
+  "totalItems": "2",
+  "member":
+    [
+        {
+            "url":"http://dlcs.io/2/3/76677bd1-705e-4599",
+            "space": 3,
+            "id": "76677bd1-705e-4599",
+            "origin": "https://example.org/dam/images/76677bd1-705e-4599.tiff",
+            "string1": "bib343434",
+            "number1": 0,
+            "tags" : ["cover", "interesting"]        
+        },
+        {
+            "url":"http://dlcs.io/2/3/0bf94941-2c0f-49fd",
+            "space": 3,
+            "id": "0bf94941-2c0f-49fd",
+            "origin": "https://example.org/dam/images/0bf94941-2c0f-49fd.tiff",
+            "string1": "bib343434",
+            "nu,mber": 1     
+        }
+    ]
+}
+```
 
