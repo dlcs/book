@@ -9,7 +9,7 @@
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
    * [ImageOptimisationPolicy](API_Reference/imageoptimisationpolicy.md)
-   * ThumbnailPolicy
+   * [ThumbnailPolicy](API_Reference/thumbnailpolicy.md)
    * [Queue](API_Reference/queue.md)
    * [Batch](API_Reference/batch.md)
    * [OriginStrategy](API_Reference/originstrategy.md)
