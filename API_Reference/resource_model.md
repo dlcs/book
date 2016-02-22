@@ -1,4 +1,3 @@
 # Resource model
 
-la la
-
+![](DLCS_5.png)
