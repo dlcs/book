@@ -9,6 +9,7 @@
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
    * [ImageOptimisationPolicy](API_Reference/imageoptimisationpolicy.md)
+   * ThumbnailPolicy
    * [Queue](API_Reference/queue.md)
    * [Batch](API_Reference/batch.md)
    * [OriginStrategy](API_Reference/originstrategy.md)
@@ -20,7 +21,6 @@
    * [NamedQuery](API_Reference/namedquery.md)
    * [PortalUser](API_Reference/portaluser.md)
    * [PortalRole](API_Reference/portalrole.md)
-   * ThumbnailPolicy
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
 * [Other ways to register images](other_ways_to_register_images.md)
 * [Using the portal](using_the_portal.md)
