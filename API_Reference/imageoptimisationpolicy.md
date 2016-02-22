@@ -1,2 +1,2 @@
-# ImageOptimisationPolicy
+![](imageOptimisationpolicy.png)
 
