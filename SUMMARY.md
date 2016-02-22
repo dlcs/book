@@ -2,13 +2,13 @@
 
 * [Introduction](README.md)
 * [Overview](overview.md)
-   * ImageOptimisationPolicy
 * [API Reference](API_Reference/README.md)
    * [Resource model](API_Reference/resource_model.md)
    * [Handling Collections](API_Reference/handling_collections.md)
    * [Customer](API_Reference/customer.md)
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
+   * ImageOptimisationPolicy
    * [Queue](API_Reference/queue.md)
    * [Batch](API_Reference/batch.md)
    * [OriginStrategy](API_Reference/originstrategy.md)
