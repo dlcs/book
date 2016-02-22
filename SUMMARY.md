@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Overview](overview.md)
+   * PortalRole
 * [API Reference](API_Reference/README.md)
    * [Resource model](API_Reference/resource_model.md)
    * [Handling Collections](API_Reference/handling_collections.md)
