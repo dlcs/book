@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * More on Named Queries
 * [Overview](overview.md)
 * [API Reference](API_Reference/README.md)
    * [Resource model](API_Reference/resource_model.md)
