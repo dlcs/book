@@ -36,11 +36,22 @@ The API allows the digitisation workflow to monitor the progress of the images i
 
 #### iiif.ly
 
+(Log in at https://iiif.ly/. As this is a demo application you won't be able to create new images and image sets straight away - you'll need to have your account activated).
+
+You can upload images from your computer or drag them in from the web:
+
+![](iiifly-1.png)
+
+After DLCS has processed them you can view them in a compatible viewer. The DLCS creates a manifest for the image set.
+
+![](iiifly-2.png)
+
 This is a demonstration web application that interacts with the DLCS API in real time to create IIIF resources from user input. It demonstrates two modes of registering images - *queued* and *immediate*. It stores a small amount of information about its users in a local database, but uses the DLCS API for everything else. It uses a feature of the DLCS API called ***spaces*** to partition the images by user. The iiif.ly application uses an API key to talk to the DLCS. This key corresponds to a single customer. Within its customer storage it can create unlimited numbers of spaces to organise the images it registers.
 
 A user can drag an image from the web or from the local machine into the iiif.ly upload user interface. When the user submits the form, the iiif.ly code will check to see if the current user already has a space in the DLCS and if not will create one. The iiif.ly application then registers the image with the DLCS in "immediate" mode. This is only permitted for API operations that register one image at a time. It is a synchronous image registration operation suitable for driving a user interface. 
 
 If the user uploaded multiple images at once, they are queued as in the Library example. Once they have all finished processing the iiif.ly application will display the set of images as a single IIIF resource - a manifest. It does this by making use of a DLCS API feature called "named queries". A named query is like a stored procedure in a relational database. As well as encoding the information required to retrieve the images stored in the DLCS, the named query also encodes the information required to *project* the results of a DLCS query into a IIIF resource. 
+
 
 ## IIIF resources and the Linked Data Platform
 
