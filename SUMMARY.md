@@ -25,6 +25,7 @@
 * [Other ways to register images](other_ways_to_register_images.md)
 * [Using the portal](using_the_portal.md)
 * [Questions](questions.md)
+* [More on Named Queries](More_on_named_queries.md)
 * [Walkthroughs](walkthroughs.md)
    * [Registering images via the API](registering_images_via_the_api.md)
    * Registering images in the portal
