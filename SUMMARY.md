@@ -28,5 +28,5 @@
 * [More on Named Queries](More_on_named_queries.md)
 * [Walkthroughs](walkthroughs.md)
    * [Registering images via the API](registering_images_via_the_api.md)
-   * Registering images in the portal
+   * [Registering images in the portal](registering_images_in_the_portal.md)
 
