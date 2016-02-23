@@ -2,7 +2,7 @@
 
 This section goes into more detail on the Hydra API and the resources it operates on.
 
-The DLCS API is at https://api.dlcs.io/ and requires credentials using basic auth over https. There is also an open API at http://dlcs.azurewebsites.net/ that requires no credentials and is backed by mock data.
+The DLCS API is at https://api.dlcs.io/ and requires credentials using basic auth over https. There is also an open API at http://dlcs.azurewebsites.net/ that requires no credentials and is backed by mock data. This is a good way to explore the resource model used by the DLCS and relate the descriptions int his documentation to API responses.
 
 The API uses JSON-LD and the [Hydra vocabulary](http://www.hydra-cg.com/). Hydra+JSON-LD turns JSON over HTTP into a self-describing HyperMedia API. Each resource type has an associated JSON-LD context, and the full description of the types and their supported properties and operations is discoverable by clients.
 
