@@ -48,7 +48,7 @@ This is the preferred model for systems integration scenarios, where you may hav
 
 As the queue is processed the DLCS fetches the source image from the supplied origin and registers it. A dashboard utility in the digitisation workflow queries the DLCS for the status of submitted batches and displays the current progress.
 
-The body of the POST to the queue is a hyrda collection (see Handling Collections):
+The body of the POST to the queue is a hydra collection (see Handling Collections):
 
 ```
 {
