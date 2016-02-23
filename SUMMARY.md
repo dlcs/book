@@ -26,4 +26,5 @@
 * [Using the portal](using_the_portal.md)
 * [Questions](questions.md)
 * [Walkthroughs](walkthroughs.md)
+   * Registering images via the API
 
