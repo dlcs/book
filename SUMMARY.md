@@ -25,5 +25,5 @@
 * [Other ways to register images](other_ways_to_register_images.md)
 * [Using the portal](using_the_portal.md)
 * [Questions](questions.md)
-* Walkthroughs
+* [Walkthroughs](walkthroughs.md)
 
