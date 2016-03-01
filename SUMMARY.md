@@ -30,5 +30,5 @@
    * [Registering images via the API](registering_images_via_the_api.md)
    * [Registering images in the portal](registering_images_in_the_portal.md)
 * [The DLCS Pilot](the_dlcs_pilot.md)
-   * [FAQs](faqs.md)
+   * [Pilot FAQs](faqs.md)
 
