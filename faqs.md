@@ -25,7 +25,7 @@ By return, you will be sent further details of the DLCS, including credentials t
 
 ## Can I see an example of a Wellcome Library digitised object being delivered via the DLCS?
 
-This example http://universalviewer.io/?manifest=http://wellcomelibrary.org/iiif/b2202296x/dmanifest is being served by the DLCS.  This can be seen by looking at the manifest (http://wellcomelibrary.org/iiif/b2202296x/dmanifest ) and observing that the image end-points are referencing the DLCS (see screen shot below).
+This example http://universalviewer.io/?manifest=http://wellcomelibrary.org/iiif/b2202296x/dmanifest is being served by the DLCS.  This can be seen by looking at the manifest (http://wellcomelibrary.org/iiif/b2202296x/dmanifest ) and observing that the image end-points are referencing the DLCS.
 
 
 ## Are there costs involved in participating in the DLCS Pilot?
