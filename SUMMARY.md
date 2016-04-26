@@ -11,6 +11,7 @@
    * [CustomerStorage](API_Reference/customerstorage.md)
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
+   * ImageStorage
    * [ImageOptimisationPolicy](API_Reference/imageoptimisationpolicy.md)
    * [ThumbnailPolicy](API_Reference/thumbnailpolicy.md)
    * [Queue](API_Reference/queue.md)
@@ -24,7 +25,6 @@
    * [NamedQuery](API_Reference/namedquery.md)
    * [PortalUser](API_Reference/portaluser.md)
    * [PortalRole](API_Reference/portalrole.md)
-   * ImageStorage
 * [DLCS Command Line Utility](dlcscommand_line_utility_md.md)
 * [Other ways to register images](other_ways_to_register_images.md)
 * [Using the portal](using_the_portal.md)
