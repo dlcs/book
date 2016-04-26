@@ -7,7 +7,7 @@
    * [Handling Collections](API_Reference/handling_collections.md)
    * [Customer](API_Reference/customer.md)
    * [Key](API_Reference/key.md)
-   * StoragePolicy
+   * [StoragePolicy](API_Reference/storagepolicy.md)
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
    * [ImageOptimisationPolicy](API_Reference/imageoptimisationpolicy.md)
