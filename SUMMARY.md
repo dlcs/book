@@ -6,7 +6,7 @@
    * [Resource model](API_Reference/resource_model.md)
    * [Handling Collections](API_Reference/handling_collections.md)
    * [Customer](API_Reference/customer.md)
-   * Key
+   * [Key](API_Reference/key.md)
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
    * [ImageOptimisationPolicy](API_Reference/imageoptimisationpolicy.md)
