@@ -11,7 +11,7 @@
    * [CustomerStorage](API_Reference/customerstorage.md)
    * [Space](API_Reference/space.md)
    * [Image](API_Reference/image.md)
-   * ImageStorage
+   * [ImageStorage](API_Reference/imagestorage.md)
    * [ImageOptimisationPolicy](API_Reference/imageoptimisationpolicy.md)
    * [ThumbnailPolicy](API_Reference/thumbnailpolicy.md)
    * [Queue](API_Reference/queue.md)
