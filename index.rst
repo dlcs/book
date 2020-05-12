@@ -6,22 +6,31 @@
 Digital Library Cloud Services (DLCS)
 =====================================
 
-Thanks for taking a look at the DLCS documentation. Please use the left hand nav to get around.
+Thanks for taking a look at the DLCS_ documentation. 
+
+DLCS is an open source cloud based platform for hosting and delivering interoperable digitised content following common open standards. 
+
+Please use the left hand nav to get around.
+
+.. _DLCS: https://dlcs.info/
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Introduction:
 
    introduction/introduction
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Overview:
 
    overview/overview
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: API Reference:
 
    API_Reference/introduction.md
@@ -50,36 +59,42 @@ Thanks for taking a look at the DLCS documentation. Please use the left hand nav
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: DLCS Command Line Utility:
    
    dlcscommand_line_utility_md.md
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Other ways to register images:
    
    walkthroughs/other_ways_to_register_images.md
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Using the portal
    
    using_the_portal.md
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Questions
    
    questions.md
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: More on Named Queries
    
    More_on_named_queries.md
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Walkthroughs
 
    walkthroughs/registering_images_via_the_api.md
@@ -87,15 +102,8 @@ Thanks for taking a look at the DLCS documentation. Please use the left hand nav
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: The DLCS Pilot
 
    pilot/the_dlcs_pilot.md
    pilot/faqs.md
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
