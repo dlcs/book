@@ -21,6 +21,8 @@ project = 'DLCS'
 copyright = '2020, Digirati'
 author = 'Digirati'
 
+master_doc = 'index'
+
 
 # -- General configuration ---------------------------------------------------
 
