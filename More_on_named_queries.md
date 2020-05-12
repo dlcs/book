@@ -1,3 +1,5 @@
+# More on Named Queries
+
 An example of Named Queries is their user by the iiif.ly application to generate a manifest from a set of images.
 
 When it registers the end user’s images, iiif.ly assigns metadata to group images together, and to preserve the order.

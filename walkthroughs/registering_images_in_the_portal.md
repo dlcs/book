@@ -12,7 +12,7 @@ These tools don't exist yet.
 
 This demo CSV file uses a github repository to simulate your origin server. Each of the files listed shares a common metadata field (Reference1) and a varying metadata field (Number1):
 
-[dixons5.csv](dixons5.csv)
+![dixons5.csv](dixons5.csv)
 
 When you upload, the DLCS will enqueue the images mentioned in the CSV and start to process them:
 
