@@ -2,11 +2,12 @@
 
 ![](customerstorage.png)
 
-Information resource that shows the current storage use for a Customer or for anindividual Space within a customer.
+Information resource that shows the current storage use for a Customer or for an individual Space within a customer.
 
 
 ```
-/customers/{0}/storage, /customers/{0}/spaces/{1}/storage
+/customers/{customer}/storage
+/customers/{customer}/spaces/{space}/storage
 ```
 
 
@@ -63,7 +64,7 @@ When the DLCS last evaluated storage use to generate this resource
 
 ### storagePolicy (🔗)
 
-When the customer storage resource is for a Customer rather than a space, itwill include this property which configures the total storage permitted across all a Customer's spaces. 
+When the customer storage resource is for a Customer rather than a space, it will include this property which configures the total storage permitted across all Customer's spaces. See [StoragePolicy](storagepolicy.md) for more information.
 
 
 | domain                | range               | readonly | writeonly |
@@ -71,7 +72,5 @@ When the customer storage resource is for a Customer rather than a space, itwill
 | vocab:CustomerStorage | vocab:StoragePolicy | True     | False     |
 
 
-```
-/customers/{0}/storage, /customers/{0}/spaces/{1}/storage/storagePolicy
-```
+`/customers/{customer}/storagePolicy/{storagePolicy}`
 

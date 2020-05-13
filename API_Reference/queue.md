@@ -5,13 +5,11 @@
 The Queue resource allows the DLCS to process very large number of image registration requests.You can post a Collection of images to the Queue for processing (a Hydra collection, see note). This results in the creation of a Batch resource. You can then retrieve these batches to monitor the progress of your images.
 
 
-```
-/customers/{0}/queue
-```
+`/customers/{customer}/queue`
 
 ## Example 
 
-http://dlcs.azurewebsites.net/customers/4/queue
+https://dlcs.azurewebsites.net/customers/4/queue
 
 ## Supported operations
 
@@ -45,9 +43,7 @@ Collection (paged) of the batches - the separate jobs you have submitted to the 
 | vocab:Queue | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/queue/batches
-```
+`/customers/{customer}/queue/batches`
 
 
 | Method | Label                              | Expects | Returns          | Statuses |
@@ -65,9 +61,7 @@ Collection (paged). Merged view of images on the queue, across batches. Typicall
 | vocab:Queue | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/queue/images
-```
+`/customers/{customer}/queue/images`
 
 
 | Method | Label                                            | Expects | Returns          | Statuses |
@@ -85,9 +79,7 @@ Collection (paged) of finished batches which are not marked as superseded. Most 
 | vocab:Queue | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/queue/recent
-```
+`/customers/{customer}/queue/recent`
 
 
 | Method | Label                                                       | Expects | Returns          | Statuses |
@@ -105,9 +97,7 @@ Collection (paged) of batches that are currently in process.
 | vocab:Queue | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/queue/active
-```
+`/customers/{customer}/queue/active`
 
 
 | Method | Label                                               | Expects | Returns          | Statuses |

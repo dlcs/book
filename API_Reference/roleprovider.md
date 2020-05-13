@@ -2,14 +2,10 @@
 
 ![](roleprovider.png)
 
-**UNSTABLE Under active development**
-
 Resource that represents the means by which the DLCS acquires roles to enforce an access control session. The DLCS maintains the session, but needs an external auth service (CAS, OAuth etc) to authenticate the user and acquire roles. The RoleProvider contains the configuration information required by the DLCS to interact with a customer's endpoint. The credentials used during the interaction are stored in S3 and not returned via the API.
 
 
-```
-/customers/{0}/authServices/{1}/roleProvider
-```
+`/customers/{customer}/authServices/{1}/roleProvider`
 
 
 ## Supported operations

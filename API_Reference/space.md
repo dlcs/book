@@ -2,18 +2,14 @@
 
 ![](space.png)
 
-**UNSTABLE Under active development**
-
 Spaces allow you to partition images into groups. You can use them to organise your images logically, like folders. You can also define different default settings to apply to images registered in a space. For example, default access control behaviour for all images in a space, or default tags. These can be overridden for individual images. There is no limit to the number of images you can register in a space.
 
 
-```
-/customers/{0}/spaces/{1}
-```
+`/customers/{customer}/spaces/{spaceId}`
 
 ## Example
 
-http://dlcs.azurewebsites.net/customers/4/spaces/11
+[https://dlcs.azurewebsites.net/customers/4/spaces/11](https://dlcs.azurewebsites.net/customers/4/spaces/11)
 
 ## Supported operations
 
@@ -27,16 +23,6 @@ http://dlcs.azurewebsites.net/customers/4/spaces/11
 
 
 ## Supported properties
-
-
-### modelId
-
-The internal identifier for the space within the customer (uri component)
-
-
-| domain      | range       | readonly | writeonly |
-|-------------|-------------|----------|-----------|
-| vocab:Space | xsd:integer | False    | False     |
 
 
 ### name
@@ -69,7 +55,7 @@ Default tags to apply to images created in this space
 | vocab:Space | xsd:string | False    | False     |
 
 
-### defaultMaxUnauthorised
+### maxUnauthorised
 
 Default size at which role-based authorisation will be enforced. -1=open, 0=always require auth
 
@@ -77,6 +63,42 @@ Default size at which role-based authorisation will be enforced. -1=open, 0=alwa
 | domain      | range       | readonly | writeonly |
 |-------------|-------------|----------|-----------|
 | vocab:Space | xsd:integer | False    | False     |
+
+
+### approximateNumberOfImages
+
+Rough total of number of images in space
+
+| domain      | range       | readonly | writeonly |
+|-------------|-------------|----------|-----------|
+| vocab:Space | xsd:integer | False    | False     |
+
+
+### keep
+
+????????????????????????
+
+| domain      | range       | readonly | writeonly |
+|-------------|-------------|----------|-----------|
+| vocab:Space | xsd:boolean | False    | False     |
+
+
+### transform
+
+????????????????????????
+
+| domain      | range       | readonly | writeonly |
+|-------------|-------------|----------|-----------|
+| vocab:Space | xsd:boolean | False    | False     |
+
+
+### imageBucket
+
+????????????????????????
+
+| domain      | range       | readonly | writeonly |
+|-------------|-------------|----------|-----------|
+| vocab:Space | xsd:string  | False    | False     |
 
 
 ### defaultRoles (🔗)
@@ -89,9 +111,7 @@ Default roles that will be applied to images in this space
 | vocab:Space | hydra:Collection | False    | False     |
 
 
-```
-/customers/{0}/spaces/{1}/defaultRoles
-```
+`/customers/{customer}/spaces/{spaceId}/defaultRoles`
 
 
 | Method | Label              | Expects    | Returns          | Statuses                           |
@@ -110,9 +130,7 @@ All the images in the space
 | vocab:Space | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/spaces/{1}/images
-```
+`/customers/{customer}/spaces/{spaceId}/images`
 
 
 | Method | Label               | Expects     | Returns          | Statuses                            |
@@ -131,9 +149,7 @@ Metadata options for the space
 | vocab:Space | vocab:Metadata | True     | False     |
 
 
-```
-/customers/{0}/spaces/{1}/metadata
-```
+`/customers/{customer}/spaces/{spaceId}/metadata`
 
 
 | Method | Label                 | Expects | Returns        | Statuses |
@@ -151,7 +167,5 @@ Storage policy for the space
 | vocab:Space | vocab:CustomerStorage | True     | False     |
 
 
-```
-/customers/{0}/spaces/{1}/storage
-```
+`/customers/{customer}/spaces/{spaceId}/storage`
 

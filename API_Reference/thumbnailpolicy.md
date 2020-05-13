@@ -2,16 +2,14 @@
 # ThumbnailPolicy
 ![# ThumbnailPolicy](thumbnailpolicy.png)
 
-The settings used to create thumbnails for the image at registration time.
+To optimise delivery of thumbnails, these are pre-generated on image registration. ThumbnailPolicy details the settings used to create the thumbnails.
 
 
-```
-/thumbnailPolicies/{0}
-```
+`/thumbnailPolicies/{thumbnailPolicy}`
 
 ## Example
 
-http://dlcs.azurewebsites.net/thumbnailPolicies/standard
+[https://dlcs.azurewebsites.net/thumbnailPolicies/standard](https://dlcs.azurewebsites.net/thumbnailPolicies/standard)
 
 ## Supported operations
 
@@ -36,7 +34,7 @@ The human readable name of the image policy
 
 ### sizes
 
-The bounding box size of the thumbnails to create. For each of these sizes, a thumbnail will be created. The longest edge of each thumbnail matches this size.
+The bounding box size of the thumbnails to create. For each of these sizes, a thumbnail will be created. Sizes must be arranged Largest -> Smallest. The longest edge of each thumbnail matches this size.
 
 
 | domain                | range                  | readonly | writeonly |

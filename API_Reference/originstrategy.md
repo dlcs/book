@@ -6,25 +6,22 @@
 
 An "out of the box" origin strategy provided by the DLCS:
 
-http://dlcs.azurewebsites.net/originStrategies/basic_https
+[https://dlcs.azurewebsites.net/originStrategies/basic_https](https://dlcs.azurewebsites.net/originStrategies/basic_https)
 
-A customer's configured CustomerOriginStrategy resources (these are created by a customer using the API or portal - the association of a customer's URI pattern with an out of the box origin strategy:
+A customer's configured CustomerOriginStrategy resources (these are created by a customer using the API or portal - the association of a customer's URI pattern with an out of the box origin strategy):
 
-http://dlcs.azurewebsites.net/customers/4/originStrategies
+[https://dlcs.azurewebsites.net/customers/4/originStrategies](https://dlcs.azurewebsites.net/customers/4/originStrategies)
 
 
 --------
 
 ## OriginStrategy
 
-**UNSTABLE Under active development**
 
 As a customer you can provide information to the DLCS to allow it to fetch your images from their origin endpoints. Every customer is given a default origin strategy, which is for the DLCS to attempt to fetch the image from its origin URL without presenting credentials. This is fine for images that are publicly available, but is unlikely to be appropriate for images you are exposing from your asset management system. You might have a service that is available only to the DLCS, or an FTP site.  
 
 
-```
-/originStrategies/{0}
-```
+`/originStrategies/{originStrategy}`
 
 
 ### Supported operations
@@ -57,14 +54,13 @@ Whether the DLCS needs stored credentials to fetch images with this strategy
 |----------------------|-------------|----------|-----------|
 | vocab:OriginStrategy | xsd:boolean | False    | False     |
 
+
 ## CustomerOriginStrategy
 
 As a customer you can provide information to the DLCS to allow it to fetch your images from their origin endpoints. Every customer has a default origin strategy, which is for the DLCS to attempt to fetch the image from its origin URL without presenting credentials. This is fine for images that are publicly available, but is unlikely to be appropriate for images you are exposing from your asset management system. You might have a service that is available only to the DLCS, or an FTP site. The DLCS has a predefined set of mechanisms for obtaining resources over HTTP, FTP, S3 etc. In your customer origin strategies you match these predefined strategies to regexes that match your origin URLs and credentials that the DLCS can use when requesting your assets.
 
 
-```
-/customers/{0}/originStrategies/{1}
-```
+`/customers/{customer}/originStrategies/{originStrategy}`
 
 
 ### Supported operations
@@ -91,7 +87,7 @@ Regex for matching origin. When the DLCS tries to work out how to fetch from you
 | vocab:CustomerOriginStrategy | xsd:string | False    | False     |
 
 
-#### originStrategy (🔗)
+#### strategy (🔗)
 
 Link to the origin strategy definition that will be used if the regex is matched.
 
@@ -101,14 +97,12 @@ Link to the origin strategy definition that will be used if the regex is matched
 | vocab:CustomerOriginStrategy | vocab:OriginStrategy | True     | False     |
 
 
-```
-/customers/{0}/originStrategies/{1}/originStrategy
-```
+`/originStrategies/{originStrategy}`
 
 
 #### credentials (🔗)
 
-JSON object - credentials appropriate to the protocol, will vary. These are stored in S3 and are not available via the API.
+JSON object - credentials appropriate to the protocol, will vary. These are either stored in S3 or as a JSON blob and are not available via the API.
 
 
 | domain                       | range      | readonly | writeonly |
@@ -116,13 +110,11 @@ JSON object - credentials appropriate to the protocol, will vary. These are stor
 | vocab:CustomerOriginStrategy | xsd:string | False    | False     |
 
 
-```
-/customers/{0}/originStrategies/{1}/credentials
-```
+`/customers/{customer}/originStrategies/{originStrategy}/credentials`
 
 
 | Method | Label                                        | Expects           | Returns           | Statuses    |
 |--------|----------------------------------------------|-------------------|-------------------|-------------|
-| PUT    | create or replace customer credential objedt | vocab:Credentials | vocab:Credentials | 201 Created |
+| PUT    | create or replace customer credential object | vocab:Credentials | vocab:Credentials | 201 Created |
 
 

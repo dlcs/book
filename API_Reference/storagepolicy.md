@@ -7,9 +7,7 @@
 A resource that acts as configuration for a customer or space. It is linked to from the storage resource for any customer or space. 
 
 
-```
-/storagePolicies/{0}
-```
+`/storagePolicies/{storagePolicy}`
 
 
 ## Supported operations
@@ -35,7 +33,7 @@ The maximum number of images that can be registered, across ALL the Customer's s
 
 ### maximumTotalSizeOfStoredImages
 
-The DLCS requires storage capacity to service the images registred by customers. This setting governs how much capacity the DLCS can use for a Customer across all the customer's spaces. Capacity is affected by image optimsation policy (higher quality = more storage used) and the absolutesize of the images (pixel dimensions).
+The DLCS requires storage capacity to service the images registred by customers. This setting governs how much capacity the DLCS can use for a Customer across all the customer's spaces. Capacity is affected by image optimsation policy (higher quality = more storage used) and the absolute size of the images (pixel dimensions).
 
 
 | domain              | range                  | readonly | writeonly |

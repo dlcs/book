@@ -1,26 +1,18 @@
 # Querying for images
 
-Any hyperlink to a collection of images can accept query parameters that filter the returned images. 
+Any hyperlink to a collection of images can accept query parameters that filter the returned images. Can be used when getting:
 
-* queue.images
-* space.images
-* batch.images
-* batch.completedImages
-* batch.errorImages
-
-(TODO - links to mock API examples of these)
+* space.images (`/customer/{customer}/space/{spaceId}/images?string1=bib343434`)
 
 Once you have registered images with the DLCS you can query it for information on them. One immediate use of this is to monitor the progress of ongoing registrations. For example, if you registered a batch of 100,000 images it will take some time for the DLCS to process them, and you would like to be able to monitor progress and view any errors that were encountered. You can also query for usage statistics.
 
 You issue a DLCS query by submitting parameters that match the metadata fields, or a serialised JSON query object. This is a pattern for the DLCS to match metadata fields on. The model is very similar to the image registration data model, except you are submitting a filter and expecting all images that match that filter to be returned.
 
-```
-curl --user name:password -X GET -d https://api.dlcs.io/customers/3/spaces/4/images?string1=bib343434
-```
+`curl --user name:password -X GET -d https://api.dlcs.io/customers/3/spaces/4/images?string1=bib343434`
 
 This returns a Hydra collection.
 
-```
+```json
 {
   "@context": "http://www.w3.org/ns/hydra/context.jsonld",
   "@id": "https://api.dlcs.io/customers/3/spaces/4/images?string1=bib343434",

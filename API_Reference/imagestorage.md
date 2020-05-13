@@ -3,12 +3,10 @@
 ![](imagestorage.png)
 
 
-Resource that shows how much storage a registered DLCS Image uses. 
+Resource that shows how much storage a registered DLCS asset uses. 
 
 
-```
-/customers/{0}/spaces/{1}/images/{2}/storage
-```
+`/customers/{customer}/spaces/{spaceId}/images/{imageId}/storage`
 
 
 ## Supported operations
@@ -24,7 +22,7 @@ Resource that shows how much storage a registered DLCS Image uses.
 
 ### thumbnailSize
 
-Storage space taken up by this item's thumbnails
+Storage space taken up by this item's thumbnails, in bytes
 
 
 | domain             | range                  | readonly | writeonly |
@@ -34,7 +32,7 @@ Storage space taken up by this item's thumbnails
 
 ### size
 
-Storage space taken up by the DLCS artifacts for this item
+Storage space taken up by the DLCS artifacts for this item, in bytes
 
 
 | domain             | range                  | readonly | writeonly |

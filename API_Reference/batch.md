@@ -4,11 +4,17 @@
 
 Represents a submitted job of images. Typically you'd interact with this while it is being processed, or to update your internal systems with the status of images on the DLCS. The DLCS might clear out old batches after a specific time interval.
 
+`/customers/{customer}/queue/batches`
 
-```
-/customers/{0}/queue/batches/{1}
-```
+## Supported operations
 
+
+| Method | Label                | Expects | Returns     | Statuses              |
+|--------|----------------------|---------|-------------|-----------------------|
+| GET    | Retrieve all Batches |         | vocab:Batch | 200 OK, 404 Not found |
+
+
+`/customers/{customer}/queue/batches/{batchId}`
 
 ## Supported operations
 
@@ -73,7 +79,7 @@ Total number of error images in the batch
 
 ### superseded
 
-Has this batch been superseded by another? An image can only be associated with one active batch at a time. If no images are associated with this batch, then it has been superseded by one or more later batches. The DLCS does notupdate this property automatically, you can force an update by POSTing to the /test resource of a batch.
+Has this batch been superseded by another? An image can only be associated with one active batch at a time. If no images are associated with this batch, then it has been superseded by one or more later batches. The DLCS does not update this property automatically, you can force an update by POSTing to the /test resource of a batch.
 
 
 | domain      | range       | readonly | writeonly |
@@ -101,9 +107,7 @@ Collection of all the images in the batch
 | vocab:Batch | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/queue/batches/{1}/images
-```
+`/customers/{customer}/queue/batches/{batchId}/images`
 
 
 | Method | Label                                             | Expects | Returns          | Statuses |
@@ -121,9 +125,7 @@ Collection of images that have completed processing
 | vocab:Batch | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/queue/batches/{1}/completedImages
-```
+`/customers/{customer}/queue/batches/{batchId}/completedImages`
 
 
 | Method | Label                                   | Expects | Returns          | Statuses |
@@ -141,9 +143,7 @@ Collection of images that encountered errors
 | vocab:Batch | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/queue/batches/{1}/errorImages
-```
+`/customers/{customer}/queue/batches/{batchId}/errorImages`
 
 
 | Method | Label                               | Expects | Returns          | Statuses |
@@ -161,7 +161,5 @@ POST to this to force an update of the batch's superseded property. Returns JSON
 | vocab:Batch | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/queue/batches/{1}/test
-```
+`/customers/{customer}/queue/batches/{batchId}/test`
 

@@ -2,11 +2,14 @@
 
 ![](key.png)
 
-Credentials for accessing the API. The Key object will only have the accompanyinf secret field returned once, when a new key is created. Thereafter only the key is available from the API.
+Credentials for accessing the API. The Key object will only have the accompanying secret field returned once, when a new key is created. Thereafter only the key is available from the API.
+
+To obtain a key and a secret, make an empty POST to this collection with administrator privileges and the returned Key object will include the generated secret.
 
 
 ```
-/customers/{0}/keys/{1}
+/customers/{customer}/keys
+/customers/{customer}/keys/{keyId}
 ```
 
 
@@ -34,7 +37,7 @@ API Key
 
 ### secret
 
-API Secret (available at creation time only)
+API Secret (available at creation time only, or via empty POST by admin)
 
 
 | domain    | range      | readonly | writeonly |

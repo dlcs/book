@@ -2,31 +2,25 @@
 
 Many of the DLCS resource properties are links that return a *collection* of resources. For example, the images in a space:
 
-```
-/customer/34/spaces/12/images
-```
+`/customer/34/spaces/12/images`
 
 This collection resource is defined thus:
 
 ### images (🔗)
 
+| domain      | range            | readonly | writeonly |
+|-------------|------------------|----------|-----------|
+| vocab:Space | hydra:Collection | True     | False     |
 
 
-|domain|range|readonly|writeonly|
-|--|--|--|--|
-|vocab:Space|hydra:Collection|True|False|
+| Method | Label               | Expects     | Returns          | Status                             |
+|--------|---------------------|-------------|------------------|------------------------------------|
+| GET    | Retrieves all Image |             | hydra:Collection | 200 OK                             |
+| POST   | Creates a new Image | vocab:Image | vocab:Image      | 201 Image created, 400 Bad Request |
 
+The resource returned from this URL is a [Hydra collection](http://www.hydra-cg.com/spec/latest/core/#collections).
 
-|Method|Label|Expects|Returns|Status|
-|--|--|--|--|--|
-|GET|Retrieves all Image| |hydra:Collection|200 OK |
-|POST|Creates a new Image|vocab:Image|vocab:Image|201 Image created, 400 Bad Request|
-
-The resource returned from this URL is a Hydra collection:
-
-http://www.hydra-cg.com/spec/latest/core/#collections
-
-In some cases, you as the API consumer will supply a collection - you POST a collection of images to your customer queue, e.g., at /customers/34/queue. Here, you would construct a Hydra Collections as the JSON payload of your POST.
+In some cases, you as the API consumer will supply a collection - you POST a collection of images to your customer queue, e.g., at `/customers/34/queue`. Here, you would construct a Hydra Collections as the JSON payload of your POST.
 
 Clients of the DLCS API should expect to deal with paged collections in any scenario that returns a collection.
 
@@ -63,7 +57,4 @@ Here you are provided with just the link and the fact that the resource at the o
 
 ### RDF note
 
-> Although in the JSON-LD serialisation, the Hydra Collection's "member" property has an inherent ordering, in the underlying RDF model there is no such ordering. This is because "member" is not defined as a @list in JSON-LD terms [1]. This is an open issue with our use of the Hydra model.
-
-
-[1] https://www.w3.org/TR/json-ld/#sets-and-lists
+> Although in the JSON-LD serialisation, the Hydra Collection's "member" property has an inherent ordering, in the underlying RDF model there is no such ordering. This is because "member" is not defined as a @list in [JSON-LD terms](https://www.w3.org/TR/json-ld/#sets-and-lists). This is an open issue with our use of the Hydra model.

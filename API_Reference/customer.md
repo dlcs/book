@@ -2,16 +2,14 @@
 
 ![](customer.png)
 
-A customer represents you, the API user. You only have access to one customer, so it is your effective entry point for the API. The only interation you can have with your Customer resource directly is updating the display name, but it provides links (🔗) tocollections of all the other resources.
+A customer represents you, the API user. You only have access to one customer, so it is your effective entry point for the API. The only interation you can have with your Customer resource directly is updating the display name, but it provides links (🔗) to collections of all the other resources.
 
 
-```
-/customers/{0}
-```
+`/customers/{customer}`
 
 ## Example
 
-http://dlcs.azurewebsites.net/customers/4
+[https://dlcs.azurewebsites.net/customers/4](https://dlcs.azurewebsites.net/customers/4)
 
 ## Supported operations
 
@@ -26,7 +24,7 @@ http://dlcs.azurewebsites.net/customers/4
 
 ### name
 
-The URL-friendly name of the customer
+The URL-friendly name of the customer, can be used in URLs rather than customerId
 
 
 | domain         | range      | readonly | writeonly |
@@ -54,9 +52,7 @@ Collection of user accounts that can log into the portal. Use this to grant acce
 | vocab:Customer | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/portalUsers
-```
+`/customers/{customer}/portalUsers`
 
 
 | Method | Label                     | Expects          | Returns          | Statuses                                  |
@@ -67,7 +63,7 @@ Collection of user accounts that can log into the portal. Use this to grant acce
 
 ### namedQueries (🔗)
 
-Collection of all the Named Queries you have configured (plus those provided 'out of the box'). See the NamedQuery topic for further information
+Collection of all the Named Queries you have configured (plus those provided 'out of the box'). See the [NamedQuery](namedquery.md) topic for further information
 
 
 | domain         | range            | readonly | writeonly |
@@ -75,9 +71,7 @@ Collection of all the Named Queries you have configured (plus those provided 'ou
 | vocab:Customer | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/namedQueries
-```
+`/customers/{customer}/namedQueries`
 
 
 | Method | Label                     | Expects          | Returns          | Statuses                                  |
@@ -88,7 +82,7 @@ Collection of all the Named Queries you have configured (plus those provided 'ou
 
 ### originStrategies (🔗)
 
-Collection of configuration settings for retrieving your registered images from their origin URLs. If your images come from multiple locations you will have multiple origin strategies. See the OriginStrategy topic.
+Collection of configuration settings for retrieving your registered images from their origin URLs. If your images come from multiple locations you will have multiple origin strategies. See the [OriginStrategy](originstrategy.md) topic for futher information
 
 
 | domain         | range            | readonly | writeonly |
@@ -96,9 +90,7 @@ Collection of configuration settings for retrieving your registered images from 
 | vocab:Customer | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/originStrategies
-```
+`/customers/{customer}/originStrategies`
 
 
 | Method | Label                         | Expects              | Returns              | Statuses                                      |
@@ -109,7 +101,7 @@ Collection of configuration settings for retrieving your registered images from 
 
 ### authServices (🔗)
 
-Collection of IIIF Authentication services available for use with your images. The images are associated with the auth services via Roles. An AuthService is a means of acquirung a role.
+Collection of IIIF Authentication services available for use with your images. The images are associated with the auth services via Roles. An [AuthService](authservice.md) is a means of acquiring a role.
 
 
 | domain         | range            | readonly | writeonly |
@@ -117,9 +109,7 @@ Collection of IIIF Authentication services available for use with your images. T
 | vocab:Customer | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/authServices
-```
+`/customers/{customer}/authServices`
 
 
 | Method | Label                      | Expects           | Returns           | Statuses                                   |
@@ -128,9 +118,9 @@ Collection of IIIF Authentication services available for use with your images. T
 | POST   | Creates a new Auth Service | vocab:AuthService | vocab:AuthService | 201 Auth Service created., 400 Bad Request |
 
 
-### roles (🔗)
+### roleProviders (🔗)
 
-Collection of the available roles you can assign to your images. In order for a user to see an image, the user must have the role associated with the image, or one of them. Users interact with an AuthService to acquire a role or roles.
+Collection of the available role providers. In order for a user to see an image, the user must have at least one role associated with the image. [RoleProviders](roleprovider.md) represent how DLCS acquires roles.
 
 
 | domain         | range            | readonly | writeonly |
@@ -138,15 +128,31 @@ Collection of the available roles you can assign to your images. In order for a 
 | vocab:Customer | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/roles
-```
+`/customers/{customer}/roleProviders`
 
 
-| Method | Label               | Expects     | Returns          | Statuses                            |
-|--------|---------------------|-------------|------------------|-------------------------------------|
-| GET    | Retrieves all Space |             | hydra:Collection | 200 OK                              |
-| POST   | Creates a new Space | vocab:Space | vocab:Space      | 201 Space created., 400 Bad Request |
+| Method | Label                       | Expects | Returns          | Statuses |
+|--------|-----------------------------|---------|------------------|----------|
+| GET    | Retrieves all RoleProviders |         | hydra:Collection | 200 OK   |
+
+
+### roles (🔗)
+
+Collection of the available roles you can assign to your images. In order for a user to see an image, the user must have the role associated with the image, or one of them. Users interact with an [AuthService](authservice.md) to acquire a role or roles.
+
+
+| domain         | range            | readonly | writeonly |
+|----------------|------------------|----------|-----------|
+| vocab:Customer | hydra:Collection | True     | False     |
+
+
+`/customers/{customer}/roles`
+
+
+| Method | Label               | Expects    | Returns          | Statuses                          |
+|--------|---------------------|------------|------------------|-----------------------------------|
+| GET    | Retrieves all Roles |            | hydra:Collection | 200 OK                            |
+| POST   | Creates a new Role  | vocab:Role | vocab:Role       | 201 Role created, 400 Bad Request |
 
 
 ### queue (🔗)
@@ -159,20 +165,18 @@ The Customer's view on the DLCS ingest queue. As well as allowing you to query t
 | vocab:Customer | vocab:Queue | True     | False     |
 
 
-```
-/customers/{0}/queue
-```
+`/customers/{customer}/queue`
 
 
 | Method | Label                                         | Expects          | Returns     | Statuses                                               |
 |--------|-----------------------------------------------|------------------|-------------|--------------------------------------------------------|
-| GET    | Returns the queue resource                    |                  | vocab:Queue |                                                        |
+| GET    | Returns the queue resource                    |                  | vocab:Queue | 200 OK                                                 |
 | POST   | Submit an array of Image and get a batch back | hydra:Collection | vocab:Batch | 201 Job has been accepted - Batch created and returned |
 
 
 ### spaces (🔗)
 
-Collection of all the Space resources associated with your customer. A space allows you to partition images, have different default roles and tags, etc. See the Space topic.
+Collection of all the Space resources associated with your customer. A space allows you to partition images, have different default roles and tags, etc. See the [Space](space.md) topic for more information.
 
 
 | domain         | range            | readonly | writeonly |
@@ -180,14 +184,17 @@ Collection of all the Space resources associated with your customer. A space all
 | vocab:Customer | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/spaces
-```
+`/customers/{customer}/spaces`
+
+
+| Method | Label                      | Expects | Returns     | Statuses |
+|--------|----------------------------|---------|-------------|----------|
+| GET    | Returns the space resource |         | vocab:Space | 200 OK   |
 
 
 ### keys (🔗)
 
-Api keys allocated to this customer. The accompanying secret is only available at creation time. To obtain a key and a secret, make an empty POST to this collection with administrator privileges and the returned Key object will include the generates secret.
+Api keys allocated to this customer. The accompanying secret is only available at creation time. To obtain a key and a secret, make an empty POST to this collection with administrator privileges and the returned [Key](key.md) object will include the generated secret.
 
 
 | domain         | range            | readonly | writeonly |
@@ -195,14 +202,17 @@ Api keys allocated to this customer. The accompanying secret is only available a
 | vocab:Customer | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/keys
-```
+`/customers/{customer}/keys`
+
+
+| Method | Label                        | Expects | Returns   | Statuses |
+|--------|------------------------------|---------|-----------|----------|
+| GET    | Returns the api key resource |         | vocab:Key | 200 OK   |
 
 
 ### storage (🔗)
 
-Storage policy for the Customer
+Storage policy for the Customer. See the [StoragePolicy](storagepolicy.md) topic for more information
 
 
 | domain         | range                 | readonly | writeonly |
@@ -210,9 +220,12 @@ Storage policy for the Customer
 | vocab:Customer | vocab:CustomerStorage | True     | False     |
 
 
-```
-/customers/{0}/storage
-```
+`/customers/{customer}/storage`
+
+
+| Method | Label                                 | Expects | Returns               | Statuses |
+|--------|---------------------------------------|---------|-----------------------|----------|
+| GET    | Returns the customer storage resource |         | vocab:CustomerStorage | 200 OK   |
 
 
 ### acceptedAgreement 

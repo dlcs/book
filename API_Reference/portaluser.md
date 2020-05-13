@@ -5,15 +5,13 @@
 A user of the portal. Represents an account for use by a person, rather than by a machine. You can create as many portal user accounts as required. Note that the roles a portal user has relate to DLCS permissions rather than permissions on your image resources.
 
 
-```
-/customers/{0}/portalUsers/{1}
-```
+`/customers/{customer}/portalUsers/{portalUserId}`
 
 ## Example
 
-http://dlcs.azurewebsites.net/customers/1/portalUsers/8b083aee
+[https://dlcs.azurewebsites.net/customers/1/portalUsers/8b083aee](https://dlcs.azurewebsites.net/customers/1/portalUsers/8b083aee)
 
-## Supported operations
+## Supported operationsf
 
 
 | Method | Label                                         | Expects          | Returns          | Statuses                                                             |
@@ -21,7 +19,7 @@ http://dlcs.azurewebsites.net/customers/1/portalUsers/8b083aee
 | GET    | Retrieve a Portal User                        |                  | vocab:PortalUser | 200 OK, 404 Not found                                                |
 | PUT    | create or replace a Portal User               | vocab:PortalUser | vocab:PortalUser | 200 OK, 201 Created Portal User, 404 Not found                       |
 | PATCH  | Update the supplied fields of the Portal User | vocab:PortalUser | vocab:PortalUser | 205 Accepted Portal User, reset view, 400 Bad request, 404 Not found |
-| DELETE | Delete the Portal User                        |                  | owl:Nothing      | 205 Accepted Portal User, reset view, 404 Not found                  |
+| DELETE | Delete the Portal User                        |                  | owl:Nothing      | 200 OK, reset view, 404 Not found                                    |
 
 
 ## Supported properties
@@ -57,9 +55,7 @@ Collection of Role resources that the user has. These roles should not be confus
 | vocab:PortalUser | hydra:Collection | True     | False     |
 
 
-```
-/customers/{0}/portalUsers/{1}/roles
-```
+`/customers/{customer}/portalUsers/{roleId}/roles`
 
 
 | Method | Label                     | Expects          | Returns          | Statuses                                  |

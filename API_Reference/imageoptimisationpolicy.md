@@ -6,12 +6,13 @@ An internal record of how the DLCS optimised your image for tile delivery. Provi
 
 
 ```
-/imageOptimisationPolicies/{0}
+/imageOptimisationPolicies
+/imageOptimisationPolicies/{imageOptimisationPolicy}
 ```
 
 ## Example
 
-http://dlcs.azurewebsites.net/imageOptimisationPolicies/fast_lossy
+[https://dlcs.azurewebsites.net/imageOptimisationPolicies/fast_lossy](https://dlcs.azurewebsites.net/imageOptimisationPolicies/fast_lossy)
 
 ## Supported operations
 
@@ -36,7 +37,7 @@ The human readable name of the image policy
 
 ### technicalDetails
 
-Details of the encoding and tools used. Might not be public.
+Details of the encoding and tools used. These details are passed to downstream handlers.
 
 
 | domain                        | range      | readonly | writeonly |
