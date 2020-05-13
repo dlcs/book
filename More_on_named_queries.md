@@ -6,7 +6,7 @@ When it registers the end user’s images, iiif.ly assigns metadata to group ima
 
 The iiif.ly customer (API user) has configured a Named Query to return a IIIF manifest.
 
-Template: https://dlcs.io/resource/{customer}/{query-name}/{space-name}/{string1}
+Template: `https://dlcs.io/resource/{customer}/{query-name}/{space-name}/{string1}`
 
 The **Named Query** – in response to requests that match this template,
 1. Select all the images in {space-name} with a string1 value of {string1} and order them by {number1}
@@ -14,6 +14,6 @@ The **Named Query** – in response to requests that match this template,
 
 Example: 
 
-https://dlcs.io/resource/4/iiifly/28EC11C6/a5425f9b
+[https://dlcs.io/resource/4/iiifly/28EC11C6/a5425f9b](https://dlcs.io/resource/4/iiifly/28EC11C6/a5425f9b)
 
-http://universalviewer.io/?manifest=https://dlcs.io/resource/4/iiifly/28EC11C6/a5425f9b 
+[https://universalviewer.io/?manifest=https://dlcs.io/resource/4/iiifly/28EC11C6/a5425f9b](https://universalviewer.io/?manifest=https://dlcs.io/resource/4/iiifly/28EC11C6/a5425f9b)

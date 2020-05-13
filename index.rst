@@ -17,21 +17,21 @@ Please use the left hand nav to get around.
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Introduction:
+   :caption: Introduction
 
    introduction/introduction
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Overview:
+   :caption: Overview
 
    overview/overview
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: API Reference:
+   :caption: API Reference
 
    API_Reference/introduction.md
    API_Reference/resource_model.md
@@ -60,14 +60,14 @@ Please use the left hand nav to get around.
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: DLCS Command Line Utility:
+   :caption: DLCS Command Line Utility
    
    dlcscommand_line_utility_md.md
 
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Other ways to register images:
+   :caption: Other ways to register images
    
    walkthroughs/other_ways_to_register_images.md
 

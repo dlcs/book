@@ -25,7 +25,7 @@ By return, you will be sent further details of the DLCS, including credentials t
 
 ## Can I see an example of a Wellcome Library digitised object being delivered via the DLCS?
 
-This example http://universalviewer.io/?manifest=http://wellcomelibrary.org/iiif/b2202296x/dmanifest is being served by the DLCS.  This can be seen by looking at the manifest (http://wellcomelibrary.org/iiif/b2202296x/dmanifest ) and observing that the image end-points are referencing the DLCS.
+This example [https://universalviewer.io/?manifest=https://wellcomelibrary.org/iiif/b2202296x/manifest](https://universalviewer.io/?manifest=https://wellcomelibrary.org/iiif/b2202296x/manifest) is being served by the DLCS.  This can be seen by looking at the manifest ([https://wellcomelibrary.org/iiif/b2202296x/manifest](https://wellcomelibrary.org/iiif/b2202296x/manifest)) and observing that the image end-points are referencing the DLCS.
 
 
 ## Are there costs involved in participating in the DLCS Pilot?
@@ -48,9 +48,9 @@ In addition to the credentials needed to access the service (discussed above) yo
 
 ## How will I interact with the DLCS pilot?
 
-The primary way participants will interact with the DLCS is via the DLCS API.  Further details of this are available at: https://dlcs.gitbooks.io/book/content/API_Reference/index.html 
+The primary way participants will interact with the DLCS is via the DLCS API.  Further details of this are available in the [API and Resources reference](https://dlcs-book.readthedocs.io/en/latest/API_Reference/introduction.html).
 
-Users without the ability to make use of the DLCS API can still upload images, via a CSV interface.  This is detailed at: https://dlcs.gitbooks.io/book/content/registering_images_in_the_portal.html.
+Users without the ability to make use of the DLCS API can still upload images, via a CSV interface.  This is detailed in [Registering images in the portal](https://dlcs-book.readthedocs.io/en/latest/walkthroughs/registering_images_in_the_portal.html).
 
 ## Are there any limits on how I use the DLCS Pilot?
 
@@ -64,7 +64,7 @@ Over the course of the pilot we hope to extend these service to include search (
 
 ## How do I get support and provide feedback?
 
-All participants will be invited to join the DLCS Slack Channel https://dlcs.slack.com/messages/general/ and this will be the primary means through which support questions can be raised and answered.  Is it also the means by which we will solicit feedback.
+All participants will be invited to join the [DLCS Slack Channel](https://dlcs.slack.com/messages/general/) and this will be the primary means through which support questions can be raised and answered.  Is it also the means by which we will solicit feedback.
 
 In addition a monthly “community call” will be held.  Details of this call – the date, time, dial-in number – will be advertised on the Slack channel.
 
@@ -85,6 +85,6 @@ The DLCS is not the means by which readers find content.  This activity still ta
 
 ### Where can I find more information about IIIF?
 
-Information about the International Image Interoperability Framework (IIIF) can be found at: http://iiif.io 
+Information about the International Image Interoperability Framework (IIIF) can be found at: [https://iiif.io/](https://iiif.io/)
 
-For a simple guide to both the image and presentation API’s see: https://goo.gl/Ae7iQz 
+For a simple guide to both the image and presentation API’s see: [https://goo.gl/Ae7iQz](https://goo.gl/Ae7iQz).

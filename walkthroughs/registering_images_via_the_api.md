@@ -2,13 +2,13 @@
 
 The following walkthrough shows how you can interact with the API at the command line via curl.
 
-In these examples the customer's API key and secret is placed in the file ```dlcs-creds``` and passed to curl via the --netrc-file argument.
+In these examples the customer's API key and secret is placed in the file `dlcs-creds` and passed to curl via the `--netrc-file` argument.
 
 ```$ curl --netrc-file dlcs-creds https://api-hydra.dlcs.io/customers/4```
 
 This returns information about the customer:
 
-```
+```json
 {
   "@context": "http://api-hydra.dlcs.io/contexts/Customer.jsonld",
   "@id": "http://api-hydra.dlcs.io/customers/4",
@@ -77,11 +77,13 @@ Behaving as a RESTful API client, we can then follow links:
 }
 ```
 
-```$ curl --netrc-file dlcs-creds https://api-hydra.dlcs.io/customers/4/spaces/3```
+```
+$ curl --netrc-file dlcs-creds https://api-hydra.dlcs.io/customers/4/spaces/3
 
 (omitted)
 
-```$ curl --netrc-file dlcs-creds https://api-hydra.dlcs.io/customers/4/spaces/3/images```
+$ curl --netrc-file dlcs-creds https://api-hydra.dlcs.io/customers/4/spaces/3/images
+```
 
 ```
 {
@@ -116,7 +118,7 @@ Behaving as a RESTful API client, we can then follow links:
       "finished": "2016-02-10T16:38:06.988255+00:00",
       "ingesting": false
     },
-...
+    ...
     {
       "@context": "http://api-hydra.dlcs.io/contexts/Image.jsonld",
       "@id": "http://api-hydra.dlcs.io/customers/4/spaces/3/images/fae349eb-4e84-49e5-b724-3f6fbc8dd6bd",
@@ -153,7 +155,7 @@ We can take a look at our queue:
 
 ```$ curl --netrc-file dlcs-creds https://api-hydra.dlcs.io/customers/4/queue```
 
-```
+```json
 {
   "@context": "http://api-hydra.dlcs.io/contexts/Queue.jsonld",
   "@id": "http://api-hydra.dlcs.io/customers/4/queue",
@@ -170,7 +172,7 @@ And we can post new images to it for ingest, either directly in the body, or fro
 
 myimages.json looks like this:
 
-```
+```json
 {
   "@type": "Collection",
   "member": [
@@ -192,7 +194,7 @@ myimages.json looks like this:
 
 and the post to the queue returns a batch resource:
 
-```
+```json
 {
   "@context": "http://api-hydra.dlcs.io/contexts/Batch.jsonld",
   "@id": "http://api-hydra.dlcs.io/customers/4/queue/batches/59",

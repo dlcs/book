@@ -20,11 +20,8 @@ When you upload, the DLCS will enqueue the images mentioned in the CSV and start
 
 Once they are all present, you could use a Named Query to view them as a single manifest:
 
-https://dlcs.io/resource/4/iiifly/F5A41BCF/dixons1985cat
+[https://dlcs.io/resource/4/iiifly/F5A41BCF/dixons1985cat](https://dlcs.io/resource/4/iiifly/F5A41BCF/dixons1985cat)
 
 And in a viewer:
 
-http://universalviewer.io/?manifest=https://dlcs.io/resource/4/iiifly/F5A41BCF/dixons1985cat
-
-
-
+[https://universalviewer.io/?manifest=https://dlcs.io/resource/4/iiifly/F5A41BCF/dixons1985cat](http://universalviewer.io/?manifest=https://dlcs.io/resource/4/iiifly/F5A41BCF/dixons1985cat)

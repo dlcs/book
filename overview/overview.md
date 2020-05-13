@@ -36,7 +36,7 @@ The API allows the digitisation workflow to monitor the progress of the images i
 
 #### iiif.ly
 
-(Log in at https://iiif.ly/. As this is a demo application you won't be able to create new images and image sets straight away - you'll need to have your account activated).
+(Log in at [https://iiif.ly/](https://iiif.ly/). As this is a demo application you won't be able to create new images and image sets straight away - you'll need to have your account activated).
 
 You can upload images from your computer or drag them in from the web:
 
@@ -63,9 +63,9 @@ As a formal specification becomes available for IIIF CRUD, the DLCS will support
 
 The DLCS provides a Hypermedia API for managing its resources. This API is built using the [Hydra vocabulary](http://www.hydra-cg.com/spec/latest/core/). While the Hydra specification is a work in progress, we have chosen to adopt it in preference to other Hypermedia vocabularies such as HAL or SIREN. We feel that having the DLCS API use the same JSON-LD standard as the IIIF resources it provides will help developers build applications on top of it.
 
-The API *entry point* is at https://api.dlcs.io. Clients of the API must present credentials using Basic authentication over https.
+The API *entry point* is at [https://api.dlcs.io](https://api.dlcs.io). Clients of the API must present credentials using Basic authentication over https.
 
-A test version of the API is also available at http://dlcs.azurewebsites.net. This can be explored without credentials. 
+A test version of the API is also available at [http://dlcs.azurewebsites.net](http://dlcs.azurewebsites.net). This can be explored without credentials. 
 
 
 ## The DLCS command line utility
