@@ -55,21 +55,13 @@ Please use the left hand nav to get around.
    API_Reference/roleprovider.md
    API_Reference/namedquery.md
    API_Reference/portaluser.md
-   API_Reference/portalrole.md
 
 .. toctree::
    :maxdepth: 2
    :hidden:
    :caption: DLCS Command Line Utility
    
-   dlcscommand_line_utility_md.md
-
-.. toctree::
-   :maxdepth: 2
-   :hidden:
-   :caption: Other ways to register images
-   
-   walkthroughs/other_ways_to_register_images.md
+   dlcscommand_line_utility_md.md  
 
 .. toctree::
    :maxdepth: 2
@@ -97,8 +89,10 @@ Please use the left hand nav to get around.
    :hidden:
    :caption: Walkthroughs
 
+   walkthroughs/sample_requests.md
    walkthroughs/registering_images_via_the_api.md
    walkthroughs/registering_images_in_the_portal.md
+   walkthroughs/other_ways_to_register_images.md
 
 .. toctree::
    :maxdepth: 2
