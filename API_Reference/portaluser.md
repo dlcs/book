@@ -4,6 +4,16 @@
 
 A user of the portal. Represents an account for use by a person, rather than by a machine. You can create as many portal user accounts as required. Note that the roles a portal user has relate to DLCS permissions rather than permissions on your image resources.
 
+`/customers/{customer}/portalUsers/`
+
+## Supported operations
+
+
+| Method | Label                     | Expects          | Returns          | Statuses                               |
+|--------|---------------------------|------------------|------------------|----------------------------------------|
+| GET    | Retrieve all Portal Users |                  | vocab:PortalUser | 200 OK, 404 Not found                  |
+| POST   | Create a Portal User      | vocab:PortalUser | vocab:PortalUser | 201 Created Portal User, 404 Not found |
+
 
 `/customers/{customer}/portalUsers/{portalUserId}`
 
@@ -11,16 +21,20 @@ A user of the portal. Represents an account for use by a person, rather than by 
 
 [https://dlcs.azurewebsites.net/customers/1/portalUsers/8b083aee](https://dlcs.azurewebsites.net/customers/1/portalUsers/8b083aee)
 
-## Supported operationsf
+## Supported operations
 
 
-| Method | Label                                         | Expects          | Returns          | Statuses                                                             |
-|--------|-----------------------------------------------|------------------|------------------|----------------------------------------------------------------------|
-| GET    | Retrieve a Portal User                        |                  | vocab:PortalUser | 200 OK, 404 Not found                                                |
-| PUT    | create or replace a Portal User               | vocab:PortalUser | vocab:PortalUser | 200 OK, 201 Created Portal User, 404 Not found                       |
-| PATCH  | Update the supplied fields of the Portal User | vocab:PortalUser | vocab:PortalUser | 205 Accepted Portal User, reset view, 400 Bad request, 404 Not found |
-| DELETE | Delete the Portal User                        |                  | owl:Nothing      | 200 OK, reset view, 404 Not found                                    |
+| Method | Label                                         | Expects          | Returns          | Statuses                            |
+|--------|-----------------------------------------------|------------------|------------------|-------------------------------------|
+| GET    | Retrieve a Portal User                        |                  | vocab:PortalUser | 200 OK, 404 Not found               |
+| PATCH  | Update the supplied fields of the Portal User | vocab:PortalUser | vocab:PortalUser | 200, 400 Bad request, 404 Not found |
+| DELETE | Delete the Portal User                        |                  | owl:Nothing      | 200 OK, reset view, 404 Not found   |
 
+<!-- 
+GET individual portal user 404
+DELETE returns 200, not 205. Not owl:nothing but {"success": true} 
+PATCH returns 200, not 205
+-->
 
 ## Supported properties
 
@@ -62,6 +76,8 @@ Collection of Role resources that the user has. These roles should not be confus
 |--------|---------------------------|------------------|------------------|-------------------------------------------|
 | GET    | Retrieves all Portal Role |                  | hydra:Collection | 200 OK                                    |
 | POST   | Creates a new Portal Role | vocab:PortalRole | vocab:PortalRole | 201 Portal Role created., 400 Bad Request |
+
+<!-- returns 500 -->
 
 
 ### enabled

@@ -14,9 +14,9 @@ Information resource that shows the current storage use for a Customer or for an
 ## Supported operations
 
 
-| Method | Label                      | Expects | Returns               | Statuses              |
-|--------|----------------------------|---------|-----------------------|-----------------------|
-| GET    | Retrieve a CustomerStorage |         | vocab:CustomerStorage | 200 OK, 404 Not found |
+| Method | Label                    | Expects | Returns               | Statuses              |
+|--------|--------------------------|---------|-----------------------|-----------------------|
+| GET    | Retrieve CustomerStorage |         | vocab:CustomerStorage | 200 OK, 404 Not found |
 
 
 ## Supported properties

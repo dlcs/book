@@ -14,13 +14,17 @@ The "Image" resource is the DLCS view of an asset that you have registered (Imag
 ## Supported operations
 
 
-| Method | Label                                   | Expects     | Returns     | Statuses                                                       |
-|--------|-----------------------------------------|-------------|-------------|----------------------------------------------------------------|
-| GET    | Retrieve a Image                        |             | vocab:Image | 200 OK, 404 Not found                                          |
-| PUT    | create or replace a Image               | vocab:Image | vocab:Image | 200 OK, 201 Created Image, 404 Not found                       |
-| PATCH  | Update the supplied fields of the Image | vocab:Image | vocab:Image | 205 Accepted Image, reset view, 400 Bad request, 404 Not found |
-| DELETE | Delete the Image                        |             | owl:Nothing | 205 Accepted Image, reset view, 404 Not found                  |
+| Method | Label                                   | Expects     | Returns     | Statuses                                 |
+|--------|-----------------------------------------|-------------|-------------|------------------------------------------|
+| GET    | Retrieve a Image                        |             | vocab:Image | 200 OK, 404 Not found                    |
+| PUT    | create or replace a Image               | vocab:Image | vocab:Image | 200 OK, 201 Created Image, 404 Not found |
+| PATCH  | Update the supplied fields of the Image | vocab:Image | vocab:Image | 200 OK, 400 Bad request, 404 Not found   |
+| DELETE | Delete the Image                        |             | owl:Nothing | 200 OK, 404 Not found                    |
 
+<!--
+PATCH returns 200, not 205
+DELETE returns 200, not 205. Not owl:nothing but {"success": true} 
+-->
 
 ## Supported properties
 
@@ -48,6 +52,8 @@ Origin endpoint from where the original image can be acquired (or was acquired)
 ### initialOrigin
 
 Endpoint to use the first time the image is retrieved. This allows an initial ingest from a short term s3 bucket (for example) but subsequent references from an https URI.
+
+<!-- is it correct that this is writeonly? -->
 
 
 | domain      | range      | readonly | writeonly |
@@ -213,6 +219,11 @@ The batch this image was ingested in (most recently). Might be blank if the batc
 | domain      | range                  | readonly | writeonly |
 |-------------|------------------------|----------|-----------|
 | vocab:Image | xsd:nonNegativeInteger | True     | False     |
+
+
+### preservedUri
+
+<!-- what does this do? -->
 
 
 ### roles (🔗)

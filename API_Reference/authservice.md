@@ -11,13 +11,16 @@
 ## Supported operations
 
 
-| Method | Label                                          | Expects           | Returns           | Statuses                                                              |
-|--------|------------------------------------------------|-------------------|-------------------|-----------------------------------------------------------------------|
-| GET    | Retrieve a Auth Service                        |                   | vocab:AuthService | 200 OK, 404 Not found                                                 |
-| PUT    | create or replace a Auth Service               | vocab:AuthService | vocab:AuthService | 200 OK, 201 Created Auth Service, 404 Not found                       |
-| PATCH  | Update the supplied fields of the Auth Service | vocab:AuthService | vocab:AuthService | 205 Accepted Auth Service, reset view, 400 Bad request, 404 Not found |
-| DELETE | Delete the Auth Service                        |                   | owl:Nothing       | 205 Accepted Auth Service, reset view, 404 Not found                  |
+| Method | Label                             | Expects           | Returns           | Statuses                                        |
+|--------|-----------------------------------|-------------------|-------------------|-------------------------------------------------|
+| GET    | Retrieve an Auth Service          |                   | vocab:AuthService | 200 OK, 404 Not found                           |
+| PUT    | Create or replace an Auth Service | vocab:AuthService | vocab:AuthService | 200 OK, 201 Created Auth Service, 404 Not found |
+| DELETE | Delete the Auth Service           |                   | owl:Nothing       | 200 OK, 404 Not found                           |
 
+<!--
+PATCH not implemented
+DELETE returns 200, not 205. Not owl:nothing but {"success": true} 
+-->
 
 ## Supported properties
 
@@ -106,6 +109,8 @@ How long a cookie session and bearer token are valid for (seconds)
 
 Child auth services of a parent (relationship between login and token,logout)
 
+<!-- This was /nestedServices Tom to expand with how this is implemented in the DLCS. -->
+
 
 | domain            | range            | readonly | writeonly |
 |-------------------|------------------|----------|-----------|
@@ -137,4 +142,3 @@ External service that can be used by the DLCS to acquire roles for user sessions
 | Method | Label                    | Expects | Returns    | Statuses              |
 |--------|--------------------------|---------|------------|-----------------------|
 | GET    | Retrieve a Role Provider |         | vocab:Role | 200 OK, 404 Not found |
-

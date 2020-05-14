@@ -22,6 +22,8 @@ Spaces allow you to partition images into groups. You can use them to organise y
 | DELETE | Delete the Space                        |             | owl:Nothing | 205 Accepted Space, reset view, 404 Not found                  |
 
 
+
+
 ## Supported properties
 
 
@@ -76,30 +78,28 @@ Rough total of number of images in space
 
 ### keep
 
-????????????????????????
-
 | domain      | range       | readonly | writeonly |
 |-------------|-------------|----------|-----------|
 | vocab:Space | xsd:boolean | False    | False     |
+
+<!-- what does this do? -->
 
 
 ### transform
 
-????????????????????????
-
 | domain      | range       | readonly | writeonly |
 |-------------|-------------|----------|-----------|
 | vocab:Space | xsd:boolean | False    | False     |
 
+<!-- what does this do? -->
 
 ### imageBucket
-
-????????????????????????
 
 | domain      | range       | readonly | writeonly |
 |-------------|-------------|----------|-----------|
 | vocab:Space | xsd:string  | False    | False     |
 
+<!-- what does this do? -->
 
 ### defaultRoles (🔗)
 

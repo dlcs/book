@@ -16,10 +16,15 @@ To obtain a key and a secret, make an empty POST to this collection with adminis
 ## Supported operations
 
 
-| Method | Label                                                                                | Expects     | Returns   | Statuses                                             |
-|--------|--------------------------------------------------------------------------------------|-------------|-----------|------------------------------------------------------|
-| GET    | Returns keys allocated to this customer resource                                     |             | vocab:Key |                                                      |
-| POST   | Submit an empty POST and the DLCS will generate a key and secret. Requires eleveated | owl:Nothing | vocab:Key | 201 Job has been accepted - key created and returned |
+| Method | Label                                                                               | Expects     | Returns   | Statuses                     |
+|--------|-------------------------------------------------------------------------------------|-------------|-----------|------------------------------|
+| GET    | Returns keys allocated to this customer resource                                    |             | vocab:Key |                              |
+| POST   | Submit an empty POST and the DLCS will generate a key and secret. Requires elevated | owl:Nothing | vocab:Key | 201 Key created and returned |
+
+<!-- 
+empty POST is returning 500 
+GET for specific key /customers/{customer}/keys/{keyId} 500
+-->
 
 
 ## Supported properties

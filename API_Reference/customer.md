@@ -14,9 +14,10 @@ A customer represents you, the API user. You only have access to one customer, s
 ## Supported operations
 
 
-| Method | Label               | Expects | Returns        | Statuses              |
-|--------|---------------------|---------|----------------|-----------------------|
-| GET    | Retrieve a Customer |         | vocab:Customer | 200 OK, 404 Not found |
+| Method  | Label               | Expects        | Returns        | Statuses                              |
+|---------|---------------------|----------------|----------------|---------------------------------------|
+| GET     | Retrieve a Customer |                | vocab:Customer | 200 OK, 404 Not found                 |
+| POST[1] | Create a Customer   | vocab:Customer | vocab:Customer | 201 Customer Created, 400 Bad Request |
 
 
 ## Supported properties
@@ -24,7 +25,7 @@ A customer represents you, the API user. You only have access to one customer, s
 
 ### name
 
-The URL-friendly name of the customer, can be used in URLs rather than customerId
+The URL-friendly name of the customer, can be used in URLs rather than customerId.
 
 
 | domain         | range      | readonly | writeonly |
@@ -40,6 +41,16 @@ The display name of the customer
 | domain         | range      | readonly | writeonly |
 |----------------|------------|----------|-----------|
 | vocab:Customer | xsd:string | False    | False     |
+
+
+### acceptedAgreement 
+
+Has the customer accepted the EULA?
+
+
+| domain         | range       | readonly | writeonly |
+|----------------|-------------|----------|-----------|
+| vocab:Customer | xsd:boolean | True     | False     |
 
 
 ### portalUsers (🔗)
@@ -93,10 +104,10 @@ Collection of configuration settings for retrieving your registered images from 
 `/customers/{customer}/originStrategies`
 
 
-| Method | Label                         | Expects              | Returns              | Statuses                                      |
-|--------|-------------------------------|----------------------|----------------------|-----------------------------------------------|
-| GET    | Retrieves all Origin Strategy |                      | hydra:Collection     | 200 OK                                        |
-| POST   | Creates a new Origin Strategy | vocab:OriginStrategy | vocab:OriginStrategy | 201 Origin Strategy created., 400 Bad Request |
+| Method | Label                         | Expects              | Returns              | Statuses                                     |
+|--------|-------------------------------|----------------------|----------------------|----------------------------------------------|
+| GET    | Retrieves all Origin Strategy |                      | hydra:Collection     | 200 OK                                       |
+| POST   | Creates a new Origin Strategy | vocab:OriginStrategy | vocab:OriginStrategy | 201 Origin Strategy created, 400 Bad Request |
 
 
 ### authServices (🔗)
@@ -228,12 +239,4 @@ Storage policy for the Customer. See the [StoragePolicy](storagepolicy.md) topic
 | GET    | Returns the customer storage resource |         | vocab:CustomerStorage | 200 OK   |
 
 
-### acceptedAgreement 
-
-Has the customer accepted the EULA?
-
-
-| domain         | range       | readonly | writeonly |
-|----------------|-------------|----------|-----------|
-| vocab:Customer | xsd:boolean | True     | False     |
-
+[1] - requires Admin credentials. POST to `/customers/`

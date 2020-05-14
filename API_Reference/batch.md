@@ -125,6 +125,7 @@ Collection of images that have completed processing
 | vocab:Batch | hydra:Collection | True     | False     |
 
 
+<!-- call fails -->
 `/customers/{customer}/queue/batches/{batchId}/completedImages`
 
 
@@ -143,6 +144,7 @@ Collection of images that encountered errors
 | vocab:Batch | hydra:Collection | True     | False     |
 
 
+<!-- call fails -->
 `/customers/{customer}/queue/batches/{batchId}/errorImages`
 
 

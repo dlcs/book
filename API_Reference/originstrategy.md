@@ -59,6 +59,17 @@ Whether the DLCS needs stored credentials to fetch images with this strategy
 
 As a customer you can provide information to the DLCS to allow it to fetch your images from their origin endpoints. Every customer has a default origin strategy, which is for the DLCS to attempt to fetch the image from its origin URL without presenting credentials. This is fine for images that are publicly available, but is unlikely to be appropriate for images you are exposing from your asset management system. You might have a service that is available only to the DLCS, or an FTP site. The DLCS has a predefined set of mechanisms for obtaining resources over HTTP, FTP, S3 etc. In your customer origin strategies you match these predefined strategies to regexes that match your origin URLs and credentials that the DLCS can use when requesting your assets.
 
+`/customers/{customer}/originStrategies/`
+
+
+### Supported operations
+
+
+| Method | Label                          | Expects                      | Returns                      | Statuses                    |
+|--------|--------------------------------|------------------------------|------------------------------|-----------------------------|
+| GET    | Retrieve all Origin Strategies |                              | vocab:CustomerOriginStrategy | 200 OK                      |
+| POST   | create an Origin Strategy      | vocab:CustomerOriginStrategy | vocab:CustomerOriginStrategy | 201 Created Origin Strategy |
+
 
 `/customers/{customer}/originStrategies/{originStrategy}`
 
@@ -66,13 +77,16 @@ As a customer you can provide information to the DLCS to allow it to fetch your 
 ### Supported operations
 
 
-| Method | Label                                             | Expects                      | Returns                      | Statuses                                                                 |
-|--------|---------------------------------------------------|------------------------------|------------------------------|--------------------------------------------------------------------------|
-| GET    | Retrieve a Origin Strategy                        |                              | vocab:CustomerOriginStrategy | 200 OK, 404 Not found                                                    |
-| PUT    | create or replace a Origin Strategy               | vocab:CustomerOriginStrategy | vocab:CustomerOriginStrategy | 200 OK, 201 Created Origin Strategy, 404 Not found                       |
-| PATCH  | Update the supplied fields of the Origin Strategy | vocab:CustomerOriginStrategy | vocab:CustomerOriginStrategy | 205 Accepted Origin Strategy, reset view, 400 Bad request, 404 Not found |
-| DELETE | Delete the Origin Strategy                        |                              | owl:Nothing                  | 205 Accepted Origin Strategy, reset view, 404 Not found                  |
+| Method | Label                       | Expects                      | Returns                      | Statuses              |
+|--------|-----------------------------|------------------------------|------------------------------|-----------------------|
+| GET    | Retrieve an Origin Strategy |                              | vocab:CustomerOriginStrategy | 200 OK, 404 Not found |
+| PUT    | Replace an Origin Strategy  | vocab:CustomerOriginStrategy | vocab:CustomerOriginStrategy | 200 OK, 404 Not found |
+| DELETE | Delete the Origin Strategy  |                              | owl:Nothing                  | 200 OK, 404 Not found |
 
+<!--
+PATCH not supported
+DELETE returns 200, not 205. Not owl:nothing but {"success": true}
+-->
 
 ### Supported properties
 

@@ -37,9 +37,7 @@ Each type-specific context defines the vocabulary for that type, for example:
 }
 ```
 
-The full description of the types and their supported properties and operations is available at the "vocab" URI:
-
-`https://dlcs.azurewebsites.net/vocab`
+The full description of the types and their supported properties and operations is available at the "vocab" URI `https://dlcs.azurewebsites.net/vocab`, or at the root of the API.
 
 A diagram showing the full model is [available here](resource_model.md); the rest of this section looks at each resource type in detail.
 
