@@ -4,8 +4,6 @@ Any hyperlink to a collection of images can accept query parameters that filter 
 
 * space.images (`/customer/{customer}/space/{spaceId}/images?string1=bib343434`)
 
-<!-- only works for space.images -->
-
 Once you have registered images with the DLCS you can query it for information on them. One immediate use of this is to monitor the progress of ongoing registrations. For example, if you registered a batch of 100,000 images it will take some time for the DLCS to process them, and you would like to be able to monitor progress and view any errors that were encountered. You can also query for usage statistics.
 
 You issue a DLCS query by submitting parameters that match the metadata fields, or a serialised JSON query object. This is a pattern for the DLCS to match metadata fields on. The model is very similar to the image registration data model, except you are submitting a filter and expecting all images that match that filter to be returned.

@@ -57,50 +57,6 @@ Default tags to apply to images created in this space
 | vocab:Space | xsd:string | False    | False     |
 
 
-### maxUnauthorised
-
-Default size at which role-based authorisation will be enforced. -1=open, 0=always require auth
-
-
-| domain      | range       | readonly | writeonly |
-|-------------|-------------|----------|-----------|
-| vocab:Space | xsd:integer | False    | False     |
-
-
-### approximateNumberOfImages
-
-Rough total of number of images in space
-
-| domain      | range       | readonly | writeonly |
-|-------------|-------------|----------|-----------|
-| vocab:Space | xsd:integer | False    | False     |
-
-
-### keep
-
-| domain      | range       | readonly | writeonly |
-|-------------|-------------|----------|-----------|
-| vocab:Space | xsd:boolean | False    | False     |
-
-<!-- what does this do? -->
-
-
-### transform
-
-| domain      | range       | readonly | writeonly |
-|-------------|-------------|----------|-----------|
-| vocab:Space | xsd:boolean | False    | False     |
-
-<!-- what does this do? -->
-
-### imageBucket
-
-| domain      | range       | readonly | writeonly |
-|-------------|-------------|----------|-----------|
-| vocab:Space | xsd:string  | False    | False     |
-
-<!-- what does this do? -->
-
 ### defaultRoles (🔗)
 
 Default roles that will be applied to images in this space

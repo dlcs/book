@@ -115,44 +115,6 @@ Collection of all the images in the batch
 | GET    | Retrieves all images in batch regardless of state |         | hydra:Collection | 200 OK   |
 
 
-### completedImages (🔗)
-
-Collection of images that have completed processing
-
-
-| domain      | range            | readonly | writeonly |
-|-------------|------------------|----------|-----------|
-| vocab:Batch | hydra:Collection | True     | False     |
-
-
-<!-- call fails -->
-`/customers/{customer}/queue/batches/{batchId}/completedImages`
-
-
-| Method | Label                                   | Expects | Returns          | Statuses |
-|--------|-----------------------------------------|---------|------------------|----------|
-| GET    | Retrieves all COMPLETED images in batch |         | hydra:Collection | 200 OK   |
-
-
-### errorImages (🔗)
-
-Collection of images that encountered errors
-
-
-| domain      | range            | readonly | writeonly |
-|-------------|------------------|----------|-----------|
-| vocab:Batch | hydra:Collection | True     | False     |
-
-
-<!-- call fails -->
-`/customers/{customer}/queue/batches/{batchId}/errorImages`
-
-
-| Method | Label                               | Expects | Returns          | Statuses |
-|--------|-------------------------------------|---------|------------------|----------|
-| GET    | Retrieves all ERROR images in batch |         | hydra:Collection | 200 OK   |
-
-
 ### test (🔗)
 
 POST to this to force an update of the batch's superseded property. Returns JSON object with single success property (boolean). 

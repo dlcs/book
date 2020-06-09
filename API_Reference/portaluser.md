@@ -69,17 +69,6 @@ Collection of Role resources that the user has. These roles should not be confus
 | vocab:PortalUser | hydra:Collection | True     | False     |
 
 
-`/customers/{customer}/portalUsers/{roleId}/roles`
-
-
-| Method | Label                     | Expects          | Returns          | Statuses                                  |
-|--------|---------------------------|------------------|------------------|-------------------------------------------|
-| GET    | Retrieves all Portal Role |                  | hydra:Collection | 200 OK                                    |
-| POST   | Creates a new Portal Role | vocab:PortalRole | vocab:PortalRole | 201 Portal Role created., 400 Bad Request |
-
-<!-- returns 500 -->
-
-
 ### enabled
 
 Whether the user can log in - for temporary or permanent rescinding of access.

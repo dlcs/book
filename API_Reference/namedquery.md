@@ -12,6 +12,8 @@ This query is an instance of the following template:
 
 This customer (iiifly) has a named query called 'manifest' that takes two parameters - the space and the string1 metadata field. The query is internally defined to use an additional field - number1 -  and to generate a manifest with one sequence, with each canvas in the sequence having one image. The images selected by the query must all have string1=ae678999 in this case, and are ordered by number1.  An image query against the dlcs API returns a collection of DLCS Image objects. a Named Query uses an DLCS image query but then projects these images and  constructs a IIIF resource from them, using the parameters provided. Information on designing and configuring named queries is provided in a special topic.
 
+See [More on named queries](../More_on_named_queries.md) for further explanation on named queries.
+
 
 <!-- 
 this returns a 500
@@ -63,4 +65,3 @@ URI template
 | domain           | range      | readonly | writeonly |
 |------------------|------------|----------|-----------|
 | vocab:NamedQuery | xsd:string | False    | False     |
-

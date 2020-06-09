@@ -51,9 +51,7 @@ Origin endpoint from where the original image can be acquired (or was acquired)
 
 ### initialOrigin
 
-Endpoint to use the first time the image is retrieved. This allows an initial ingest from a short term s3 bucket (for example) but subsequent references from an https URI.
-
-<!-- is it correct that this is writeonly? -->
+Endpoint to use the first time the image is retrieved. This allows an initial ingest from a short term s3 bucket (for example) but subsequent references from an https URI. This property is only used for ingestion and is not persisted for future use.
 
 
 | domain      | range      | readonly | writeonly |
@@ -219,11 +217,6 @@ The batch this image was ingested in (most recently). Might be blank if the batc
 | domain      | range                  | readonly | writeonly |
 |-------------|------------------------|----------|-----------|
 | vocab:Image | xsd:nonNegativeInteger | True     | False     |
-
-
-### preservedUri
-
-<!-- what does this do? -->
 
 
 ### roles (🔗)
