@@ -146,7 +146,7 @@ The recommended/typical usage is to batch a number of images (e.g. 100) for inge
 ```
 
 ```bash
-$ curl -X PUT https://api.dlcs/customers/4/queue -v \ 
+$ curl -X POST https://api.dlcs/customers/4/queue -v \ 
  -d '@batch.json' \
  -H "Content-Type: application/json" \
  -u my-key:my-key-secret
